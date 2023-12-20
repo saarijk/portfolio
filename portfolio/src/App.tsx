@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import { SelectedPage } from "./Shared/types";
 import { useState, useEffect } from "react";
+import Greyscale from "@/Hues/greyscale";
 
 function App() {
 
@@ -34,11 +35,13 @@ function App() {
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-        <Hues>
+        <Greyscale>
           <Hero setSelectedPage={setSelectedPage} />
           <Skills setSelectedPage={setSelectedPage}  />
           <Projects setSelectedPage={setSelectedPage}  />
           <Contact setSelectedPage={setSelectedPage}  />
+        </Greyscale>
+        <Hues>
         </Hues>
       </div>
     </>

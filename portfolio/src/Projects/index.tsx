@@ -10,10 +10,12 @@ const Projects = ({ setSelectedPage }: Props) => {
   return (
     <> 
         <section id="projects">
-            <motion.div className="h-[100vh] w-full bg-slate-200"
+            <motion.div className="h-[80vh] w-full bg-black flex align-center justify-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
             >
-                Projects
+                <div className="w-5/6 pt-10">
+                    <h1 className="text-slate-300 text-4xl font-bold">PROJECTS</h1>
+                </div>
             </motion.div>
         </section>
     </>
