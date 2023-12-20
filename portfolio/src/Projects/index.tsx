@@ -10,7 +10,7 @@ const Projects = ({ setSelectedPage }: Props) => {
   return (
     <> 
         <section id="projects">
-            <motion.div className="h-[80vh] w-full bg-black flex align-center justify-center"
+            <motion.div className="h-[80vh] w-full bg-darkBlue flex align-center justify-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
             >
                 <div className="w-5/6 pt-10">

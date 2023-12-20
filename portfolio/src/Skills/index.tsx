@@ -25,6 +25,7 @@ const Skills = ({ setSelectedPage }: Props) => {
   const itemVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
+    hover: { y: 5 },
   };
 
   return (
@@ -47,6 +48,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               <motion.div
                 className="w-1/4 bg-blue-500 bg-opacity-10 p-8 rounded-md"
                 variants={itemVariants}
+                whileHover="hover"
               >
                 <img src={gitImg} className="h-10 w-10 mb-6 opacity-50" />
                 <h1 className="font-bold mb-3 text-slate-300">

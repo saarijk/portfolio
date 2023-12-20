@@ -69,8 +69,10 @@ const Hero = ({ setSelectedPage }: Props) => {
             top: 0,
             zIndex: scrollPosition > fixedPosition ? 1 : 0,
             width: scrollPosition > fixedPosition ? 'auto' : '50%',
-            backgroundColor: scrollPosition > fixedPosition ? 'black' : 'transparent',
+            backgroundColor: scrollPosition > fixedPosition ? `rgba(0, 0, 0, 0.7)` : 'transparent',
             marginTop: scrollPosition > fixedPosition ? '0px' : '300px',
+            WebkitBackdropFilter: scrollPosition > fixedPosition ? 'blur(8px)' : 'blur(0px)',
+            backdropFilter: scrollPosition > fixedPosition ? 'blur(8px)' : 'blur(0px)',
             transition: 'width 0.5s ease-in-out, background-color 0.5s ease-in-out, margin-top 0.5s ease-in-out',
           }}
         >

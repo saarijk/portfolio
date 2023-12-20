@@ -17,13 +17,15 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             style={{
                 backgroundColor: navbarBackground,
                 transitionDuration: `${transitionDuration}`,
+                WebkitBackdropFilter: 'blur(8px)',
+                backdropFilter: 'blur(8px)',
             }}
         >
             <div className="w-5/6 mx-auto flex justify-between items-center">
                 {/* title */}
                 <h1 className="text-slate-400 text-sm p-1"></h1>
                 {/* links */}
-                <div className="flex align-center gap-8 text-xs items-center text-slate-500 p-1">
+                <div className="flex align-center gap-8 text-xs font-bold items-center text-slate-500 p-1">
                     <Link 
                         page="HOME"
                         selectedPage={selectedPage}
