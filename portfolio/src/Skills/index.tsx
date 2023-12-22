@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SelectedPage } from '@/Shared/types';
-import reactImg from '@/assets/reactLogo2.png';
-import tsImg from '@/assets/tsLogo2.png';
-import gitImg from '@/assets/gitLogo2.png';
+import reactImg from '@/assets/reactLogo.png';
+import tsImg from '@/assets/tsLogo.png';
+import gitImg from '@/assets/gitLogo.png';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 type Props = {
@@ -30,28 +30,28 @@ const Skills = ({ setSelectedPage }: Props) => {
 
   return (
     <>
-      <section id="skills">
+      <section id="skills" className="mt-[200px] font-roboto">
         <motion.div
-          className="h-[60vh] w-full bg-black flex align-center justify-center"
+          className="h-[60vh] w-full flex align-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
           <div className="w-5/6 pt-10">
-            <h1 className="text-slate-300 text-4xl font-bold">SKILLS</h1>
+            <h1 className="text-black text-4xl font-bold text-center">SKILLS</h1>
             <motion.div
-              className="flex gap-4 mt-14 text-slate-400"
+              className="flex gap-4 mt-14 text-black"
               variants={containerVariants}
             >
               {/* skills breakdown */}
               <motion.div
-                className="w-1/4 bg-blue-500 bg-opacity-10 p-8 rounded-md"
+                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={gitImg} className="h-10 w-10 mb-6 opacity-50" />
-                <h1 className="font-bold mb-3 text-slate-300">
+                <img src={gitImg} className="h-10 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">
                   Git Version Control
                 </h1>
                 <p className="text-sm">
@@ -60,11 +60,12 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 bg-blue-500 bg-opacity-10 p-8 rounded-md"
+                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
+                whileHover="hover"
               >
-                <GlobeAltIcon className="h-10 w-10 mb-6 opacity-[55%]" />
-                <h1 className="font-bold mb-3 text-slate-300">
+                <GlobeAltIcon className="h-10 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">
                   Web Development
                 </h1>
                 <p className="text-sm">
@@ -74,22 +75,24 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 bg-blue-500 bg-opacity-10 p-8 rounded-md"
+                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
+                whileHover="hover"
               >
-                <img src={tsImg} className="h-10 w-10 mb-6 opacity-50" />
-                <h1 className="font-bold mb-3 text-slate-300">TypeScript</h1>
+                <img src={tsImg} className="h-10 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">TypeScript</h1>
                 <p className="text-sm">
                   Knowledgeable about type annotations, interfaces, modules, and
                   other TS features for enhanced code quality.
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 bg-blue-500 bg-opacity-10 p-8 rounded-md"
+                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
+                whileHover="hover"
               >
-                <img src={reactImg} className="h-9 w-10 mb-6 opacity-[55%]" />
-                <h1 className="font-bold mb-3 text-slate-300">React</h1>
+                <img src={reactImg} className="h-9 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">React</h1>
                 <p className="text-sm">
                   Experienced in building UIs using React. Knowledgeable about state
                   management and other core concepts in React development.

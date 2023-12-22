@@ -7,9 +7,10 @@ import Skills from "./Skills";
 import { SelectedPage } from "./Shared/types";
 import { useState, useEffect } from "react";
 import Greyscale from "@/Hues/greyscale";
+import Home from "./Home";
+import mountains from "@/assets/mountains.png";
 
 function App() {
-
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
@@ -27,22 +28,22 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const appStyle = {
+    /*backgroundImage: `url(${mountains})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top center",*/
+  };
+
   return (
     <>
-      <div className="app">
-        <Nav 
+      <div className="app bg-white" style={appStyle}>
+        <Nav
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-        <Greyscale>
-          <Hero setSelectedPage={setSelectedPage} />
-          <Skills setSelectedPage={setSelectedPage}  />
-          <Projects setSelectedPage={setSelectedPage}  />
-          <Contact setSelectedPage={setSelectedPage}  />
-        </Greyscale>
-        <Hues>
-        </Hues>
+        <Home setSelectedPage={setSelectedPage} />
+        <Skills setSelectedPage={setSelectedPage} />
       </div>
     </>
   );

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import reactSvg from "@/assets/react.svg";
+import electric from "@/assets/electric.png";
 import { SelectedPage } from '@/Shared/types';
 import { motion } from "framer-motion";
-import Purple from "@/assets/purpleAbstract.jpg";
-import Particles from "@/assets/particles.jpg";
-import Particles2 from "@/assets/particles2.jpg";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -34,51 +31,53 @@ const Hero = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="home"
-      className="h-[90vh] w-full relative overflow-hidden"
+      className="h-[100vh] w-full relative overflow-hidden bg-darkBlue"
     >
-      {/* Background Image Container */}
       <div
-        className="w-full h-full relative"
+        className="w-full h-[50%] relative flex items-center justify-center"
         style={{
-          backgroundImage: `url(${Particles})`,
+          backgroundImage: `url(${electric})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
+          backgroundPosition: 'center center',
+          marginTop: '150px',
+          opacity: '30%'
         }}
-      >
-        {/* Overlay element for the background image */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: overlayColor,
-            transition: "background-color 0.4s ease-in-out",
-            zIndex: 0, // Set zIndex to 0 to ensure it's behind the text
-          }}
-        />
-      </div>
+      ></div>
+      {/* Overlay element for the background */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundColor: overlayColor,
+          transition: "background-color 0.4s ease-in-out",
+          zIndex: 0, // Set zIndex to 0 to ensure it's behind the text
+        }}
+      />
 
       {/* container */}
       <motion.div
         className="w-full mx-auto flex relative z-10"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
-        {/* left side */}
         <div
-          className="w-1/2 relative z-10"
+          className="w-5/6 relative z-10"
           style={{
             position: 'fixed',
+            left: '50%',
+            transform: 'translateX(-50%)',
             top: 0,
             zIndex: scrollPosition > fixedPosition ? 1 : 0,
-            width: scrollPosition > fixedPosition ? 'auto' : '50%',
+            width: scrollPosition > fixedPosition ? '100%' : '75%',
+            textAlign: 'center',
             backgroundColor: scrollPosition > fixedPosition ? `rgba(0, 0, 0, 0.7)` : 'transparent',
-            marginTop: scrollPosition > fixedPosition ? '0px' : '300px',
+            marginTop: scrollPosition > fixedPosition ? '0px' : '750px',
             WebkitBackdropFilter: scrollPosition > fixedPosition ? 'blur(8px)' : 'blur(0px)',
             backdropFilter: scrollPosition > fixedPosition ? 'blur(8px)' : 'blur(0px)',
             transition: 'width 0.5s ease-in-out, background-color 0.5s ease-in-out, margin-top 0.5s ease-in-out',
           }}
         >
-          {/* Transparent overlay for the text container */}
+          {/* text */}
           <div
-            className="p-16 rounded-xl bg-transparent"
+            className="p-16 rounded-xl bg-transparent flex flex-col items-center justify-center align-center"
             style={{
               backgroundColor: `rgba(0, 0, 0, 0)`,
             }}
@@ -92,9 +91,7 @@ const Hero = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         {/* right side */}
-        <div className="w-1/2 mx-auto flex items-center justify-center">
-          <img src={reactSvg} className="w-[200px]" alt="React logo" />
-        </div>
+        <></>
       </motion.div>
     </section>
   );

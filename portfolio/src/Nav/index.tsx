@@ -9,24 +9,22 @@ type Props = {
 };
 
 const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-    const navbarBackground = isTopOfPage ? "" : "bg-black transition-all ease-in";
+    console.log('isTopOfPage:', isTopOfPage);
+    const navbarBackground = isTopOfPage ? "bg-white" : "bg-transparent";
     const transitionDuration = "0.3s";
 
     return (
-        <div className="w-full top-0 fixed items-center align-center z-30 p-1 bg-black bg-opacity-50" 
+        <div className={` ${navbarBackground} w-full top-0 fixed items-center align-center z-30 p-1 bg-opacity-0`}
             style={{
-                backgroundColor: navbarBackground,
                 transitionDuration: `${transitionDuration}`,
-                WebkitBackdropFilter: 'blur(8px)',
-                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(0px)',
+                backdropFilter: 'blur(0px)',
             }}
         >
-            <div className="w-5/6 mx-auto flex justify-between items-center">
-                {/* title */}
-                <h1 className="text-slate-400 text-sm p-1"></h1>
-                {/* links */}
-                <div className="flex align-center gap-8 text-xs font-bold items-center text-slate-500 p-1">
-                    <Link 
+            <div className="w-[90%] mx-auto flex justify-between items-center py-3">
+                {/* left */}
+                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center text-black p-1 bg-white">
+                <Link 
                         page="HOME"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
@@ -41,6 +39,9 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
+                </div>
+                {/* right */}
+                <div className="flex align-center gap-8 text-md font-bold font-roboto items-center text-black p-1 bg-white">
                     <Link 
                         page="CONTACT"
                         selectedPage={selectedPage}
