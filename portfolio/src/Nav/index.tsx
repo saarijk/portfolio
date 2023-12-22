@@ -14,7 +14,7 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const transitionDuration = "0.3s";
 
     return (
-        <div className={` ${navbarBackground} w-full top-0 fixed items-center align-center z-30 p-1 bg-opacity-0`}
+        <div className={` ${navbarBackground} w-full text-black hover:text-slate-600 top-0 fixed items-center align-center z-30 p-1 bg-opacity-0`}
             style={{
                 transitionDuration: `${transitionDuration}`,
                 WebkitBackdropFilter: 'blur(0px)',
@@ -23,7 +23,7 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         >
             <div className="w-[90%] mx-auto flex justify-between items-center py-3">
                 {/* left */}
-                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center text-black p-1 bg-white">
+                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1 bg-white">
                 <Link 
                         page="HOME"
                         selectedPage={selectedPage}
@@ -41,12 +41,12 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     />
                 </div>
                 {/* right */}
-                <div className="flex align-center gap-8 text-md font-bold font-roboto items-center text-black p-1 bg-white">
+                <div className="flex align-center gap-8 text-md font-bold font-roboto items-center p-1 bg-white">
                     <Link 
                         page="CONTACT"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
-                    />
+                    /> 
                 </div>
             </div>
         </div>
