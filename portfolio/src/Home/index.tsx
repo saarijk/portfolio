@@ -62,7 +62,7 @@ type Props = {
             <div className="w-5/6 flex mx-auto ">
                 <div className="text-black text-2xl font-roboto w-1/2">
                     <h1>Hello and welcome!<br/ ><br/ >I'm <span className="font-bold text-4xl">Katariina</span>, an aspiring web developer with a flair for crafting engaging and responsive user interfaces.</h1>
-                    <p className="text-xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black transition duration-500"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
+                    <p className="text-xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
                 </div>
             </div>
 

@@ -32,7 +32,7 @@ const Skills = ({ setSelectedPage }: Props) => {
     <>
       <section id="skills" className="mt-[200px] font-roboto">
         <motion.div
-          className="h-[60vh] w-full flex align-center justify-center"
+          className="h-[100vh] w-full flex align-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             >
               {/* skills breakdown */}
               <motion.div
-                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -60,7 +60,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -75,7 +75,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -87,7 +87,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="hover:drop-shadow-md w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
