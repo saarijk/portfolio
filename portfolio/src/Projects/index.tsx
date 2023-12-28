@@ -38,7 +38,7 @@ const Projects = ({ setSelectedPage }: Props) => {
     <>
       {/* container */}
       <motion.div
-        className="h-[100vh] w-full flex justify-center"
+        className="h-auto w-full flex justify-center"
         id="projects"
         onViewportEnter={() => {
           setSelectedPage(SelectedPage.Projects);
@@ -46,14 +46,14 @@ const Projects = ({ setSelectedPage }: Props) => {
       >
         <div className="w-5/6 flex flex-col mt-[48px] font-roboto text-xl items-center">
           {/* title */}
-          <div className="text-black text-4xl font-bold flex items-end justify-end text-right">
-            <h1 className="">PROJECTS</h1>
+          <div className="text-black text-4xl font-bold relative w-full">
+            <h1 className="text-right">PROJECTS</h1>
           </div>
           {/* content */}
           <div className="w-full">
-            <p className="p-6">Individual projects will be displayed here</p>
+            <p className="p-6 text-[15px] font-bold"></p>
             {/* grid */}
-            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8 mb-[50px]">
+            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8 mb-[300px]">
               {ProjectComponents.map((ProjectComponent, index) => (
                 <Suspense key={index} fallback={<div>Loading...</div>}>
                   <motion.div
@@ -63,9 +63,10 @@ const Projects = ({ setSelectedPage }: Props) => {
                       height: expandedStates[index] ? 500 : 52,
                       paddingTop: expandedStates[index] ? 15 : 0,
                       overflow: 'hidden',
+                      borderBottom: expandedStates[index] ? "" : "2px solid #000000",
                     }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="w-full rounded-lg bg-white border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500"
+                    className="w-full"
                   >
                     <ProjectComponent />
                   </motion.div>

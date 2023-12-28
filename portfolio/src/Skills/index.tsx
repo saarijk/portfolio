@@ -32,7 +32,7 @@ const Skills = ({ setSelectedPage }: Props) => {
     <>
       <section id="skills" className="mt-[200px] font-roboto">
         <motion.div
-          className="h-[100vh] w-full flex align-center justify-center"
+          className="h-[50vh] w-full flex align-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -54,7 +54,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <h1 className="font-bold mb-3 text-black">
                   Git Version Control
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm  font-bold">
                   Experienced in using Git to track changes in code repositories.
                   Familiar with commit, push, pull, and branch management.
                 </p>
@@ -68,7 +68,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <h1 className="font-bold mb-3 text-black">
                   Web Development
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm  font-bold">
                   Skilled in frontend web development, creating visually appealing
                   and responsive UIs. Proficient in HTML and CSS to build interactive
                   and dynamic websites.
@@ -81,7 +81,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={tsImg} className="h-10 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">TypeScript</h1>
-                <p className="text-sm">
+                <p className="text-sm  font-bold">
                   Knowledgeable about type annotations, interfaces, modules, and
                   other TS features for enhanced code quality.
                 </p>
@@ -93,7 +93,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={reactImg} className="h-9 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">React</h1>
-                <p className="text-sm">
+                <p className="text-sm  font-bold">
                   Experienced in building UIs using React. Knowledgeable about state
                   management and other core concepts in React development.
                 </p>
