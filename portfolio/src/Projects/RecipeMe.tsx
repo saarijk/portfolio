@@ -32,11 +32,13 @@ function RecipeMe({}: Props) {
                     </ul>
                     
                 </div>
-                <div className="w-1/2 flex-1 h-full overflow-y-auto">
+                <div className="w-1/2 flex-1 h-auto">
                 {/* right side */}
-                    {imagePaths.map((image, index) => (
-                        <img key={index} src={image} className="p-3" alt={`Image ${index + 1}`} />
-                    ))}
+                    <div className="flex flex-wrap p-3 justify-around max-h-[400px] overflow-y-auto">
+                        {imagePaths.map((image, index) => (
+                            <img key={index} src={image} className="mb-2 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 rounded-lg" alt={`Image ${index + 1}`} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

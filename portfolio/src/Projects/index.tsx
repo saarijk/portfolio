@@ -58,7 +58,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                 <Suspense key={index} fallback={<div>Loading...</div>}>
                   <motion.div
                     onClick={() => handleItemClick(index)}
-                    initial={false} // Disable initial animation
+                    initial={false} 
                     animate={{
                       height: expandedStates[index] ? 500 : 52,
                       paddingTop: expandedStates[index] ? 15 : 0,
