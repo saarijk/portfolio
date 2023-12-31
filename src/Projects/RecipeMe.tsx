@@ -1,5 +1,3 @@
-import React from 'react'
-import image from "@/assets/mountains.png";
 import rm1 from "@/assets/screencaps/rm1.png";
 import rm2 from "@/assets/screencaps/rm2.png";
 

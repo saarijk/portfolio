@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SelectedPage } from '@/Shared/types';
 import reactImg from '@/assets/reactLogo.png';

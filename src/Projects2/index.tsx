@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SelectedPage } from "@/Shared/types";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

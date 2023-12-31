@@ -1,5 +1,3 @@
-import Hero from "./Hero";
-import Hues from "./Hues";
 import Nav from "./Nav";
 import Projects from "./Projects";
 import Skills from "./Skills";
