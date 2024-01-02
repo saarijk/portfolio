@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <div className="app bg-white" style={appStyle}>
+      <div className="app bg-white w-full" style={appStyle}>
         <Nav
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}

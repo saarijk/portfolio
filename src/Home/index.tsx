@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import { SelectedPage } from '@/Shared/types';
+import { useMediaQuery } from 'react-responsive';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
   }
 
   const Home = ({ setSelectedPage }: Props) => {
+    const isSmScreen = useMediaQuery({ maxWidth: 640 });
   return (
     <><motion.section id="home" onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
-        <div className=" w-full h-auto flex flex-col">
+        <div className=" w-full h-auto flex flex-col items-center justify-center align-center">
             {/* container */}
             <div className="w-5/6 flex flex-auto">
                 {/* top 2/3 */}
-                <div className=" ml-auto h-[500px] flex">
+                <div className=" ml-auto h-[550px] flex mt-[-100px]">
                     <div className="border-r-2 border-black h-full flex flex-col justify-end">
                     {/* left */}
                         <div className="w-full flex justify-center items-center align-center">
@@ -58,12 +60,31 @@ type Props = {
                     <p className="text-center text-3xl w-[112px] pt-4 font-nothing pr-2">by Kat</p>
                 </div>
         </div>
-            <div className="w-5/6 flex mx-auto ">
-                <div className="text-black text-2xl font-roboto w-1/2">
-                    <h1>Hello and welcome!<br/ ><br/ >I'm <span className="font-bold text-4xl">Katariina</span>, an aspiring web developer with a flair for crafting engaging and responsive user interfaces.</h1>
-                    <p className="text-2xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500 font-bold"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
-                </div>
-            </div>
+                {isSmScreen ? (
+                    <>
+                        <div className="grid place-items-center h-full">
+                        <div className="w-full max-w-screen-lg">
+                            <div className="h-[500px] bg-red-300 p-6 flex flex-col justify-center items-center">
+                                <div className="text-black text-2xl font-roboto text-center">
+                                <h1>Hello and welcome!<br/ ><br/ >I'm <span className="font-bold text-4xl">Katariina</span>, an aspiring web developer with a flair for crafting engaging and responsive user interfaces.</h1>
+                                <p className="text-2xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500 font-bold"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </>
+                ) : 
+                 (
+                    <>
+                    <div className="w-5/6 flex mx-auto bg-white">
+                        <div className="text-black text-2xl font-roboto w-1/2">
+                            <h1>Hello and welcome!<br/ ><br/ >I'm <span className="font-bold text-4xl">Katariina</span>, an aspiring web developer with a flair for crafting engaging and responsive user interfaces.</h1>
+                            <p className="text-2xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500 font-bold"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
+                        </div>
+                    </div>
+                    </>
+                    )
+                }
 
             </motion.section>
     </>
