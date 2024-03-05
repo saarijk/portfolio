@@ -32,6 +32,7 @@ const Projects = ({ setSelectedPage }: Props) => {
     React.lazy(() => import('./RecipeMe')),
     React.lazy(() => import('./Seelevel')),
     React.lazy(() => import('./Arneura')),
+    React.lazy(() => import('./Gymapp'))
   ];
 
   return (

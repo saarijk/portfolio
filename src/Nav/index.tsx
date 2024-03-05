@@ -22,7 +22,7 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         >
             <div className="w-[90%] mx-auto flex justify-between items-center py-3">
                 {/* left */}
-                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1 bg-white">
+                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1 bg-white ">
                 <Link 
                         page="HOME"
                         selectedPage={selectedPage}

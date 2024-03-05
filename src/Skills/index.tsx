@@ -3,6 +3,7 @@ import { SelectedPage } from '@/Shared/types';
 import reactImg from '@/assets/reactLogo.png';
 import tsImg from '@/assets/tsLogo.png';
 import gitImg from '@/assets/gitLogo.png';
+import gqlImg from '@/assets/graphQLlogo.png';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 type Props = {
@@ -31,21 +32,21 @@ const Skills = ({ setSelectedPage }: Props) => {
     <>
       <section id="skills" className="mt-[200px] font-roboto">
         <motion.div
-          className="h-[50vh] w-full flex align-center justify-center"
+          className="h-auto w-full flex align-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          <div className="w-5/6 pt-10">
+          <div className="w-11/12 pt-10">
             <h1 className="text-black text-4xl font-bold text-center">SKILLS</h1>
             <motion.div
-              className="flex gap-4 mt-14 text-black"
+              className="flex flex-wrap justify-center gap-3 mt-14 text-black"
               variants={containerVariants}
             >
               {/* skills breakdown */}
               <motion.div
-                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -59,7 +60,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -74,7 +75,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -86,7 +87,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -95,6 +96,17 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <p className="text-sm  font-bold">
                   Experienced in building UIs using React. Knowledgeable about state
                   management and other core concepts in React development.
+                </p>
+              </motion.div>
+              <motion.div
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                variants={itemVariants}
+                whileHover="hover"
+              >
+                <img src={gqlImg} className="h-9 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">GraphQL</h1>
+                <p className="text-sm  font-bold">
+                  Familiar with the basics of GraphQL integration for data querying and manipulation, using a schema-first approach and Apollo Server.
                 </p>
               </motion.div>
             </motion.div>

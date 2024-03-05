@@ -55,13 +55,13 @@ type Props = {
                 </div>
                 <div className="w-5/6 flex items-end justify-end">
                     {/* bottom */}
-                    <p className="text-center text-3xl w-[112px] pt-4 font-nothing pr-2">by Kat</p>
+                    <p className="text-center text-3xl w-[112px] pt-4 font-nothing pr-2"></p>
                 </div>
         </div>
             <div className="w-5/6 flex mx-auto ">
                 <div className="text-black text-2xl font-roboto w-1/2">
                     <h1>Hello and welcome!<br/ ><br/ >I'm <span className="font-bold text-4xl">Katariina</span>, an aspiring web developer with a flair for crafting engaging and responsive user interfaces.</h1>
-                    <p className="text-2xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500 font-bold"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
+                    <p className="text-2xl"><br/>If you like what you see, feel free to <span className="hover:border-b-[1px] hover:border-black border-transparent transition duration-500 font-bold hover-underline-animation"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">connect with me on LinkedIn</a></span></p>
                 </div>
             </div>
 
