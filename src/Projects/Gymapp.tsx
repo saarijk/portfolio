@@ -17,7 +17,7 @@ function Gymapp({}: Props) {
                 <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[400px] overflow-y-auto">
                     {/* left side */}
                     <p className="pl-6 leading-normal p-3">
-                        My first ever full-stack application: I made a simple app for users to store data on their workouts. The backend app uses GraphQL and TypeScript, and it has a React/TypeScript frontend app that uses Tailwind for styling.
+                        My first ever full-stack application: I made a simple app for users to track their workouts. The backend app uses GraphQL and TypeScript, and it has a React/TypeScript frontend app that uses Tailwind for styling.
                     </p>
                     <p className="px-6">
                         SPECIAL FEATURES:
