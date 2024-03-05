@@ -9,24 +9,24 @@ function RecipeMe({}: Props) {
     <>
         <div>
             <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">RecipeMe</h1>
-            <div className="flex text-[15px] font-bold">
+            <div className="flex text-[13px] font-ibm">
                 {/* container */}
-                <div className="w-1/2">
+                <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[400px] overflow-y-auto">
                     {/* left side */}
-                    <p className="p-6">
+                    <p className="pl-6 leading-normal p-3">
                         This was my first successful TypeScript/React project. It uses a custom API to retrieve recipes for users to browse.
                     </p>
-                    <p className="px-6 py-3">
+                    <p className="px-6">
                         SPECIAL FEATURES:
                     </p>
-                    <ul className="px-6">
-                        <li>Uses Tailwind CSS for styling</li>
-                        <li>Framer Motion for animations/transitions</li>
-                        <li>Custom fonts from Google Fonts</li>
-                        <li>Modular structure</li>
-                        <li>Search function using custom API</li>
-                        <li>Users can "favourite" recipes</li>
-                        <li>Built on Vite</li>
+                    <ul className="list-disc pl-8 pr-3">
+                    <li className="my-2">Uses Tailwind CSS for styling</li>
+                    <li className="my-2">Framer Motion for animations/transitions</li>
+                    <li className="my-2">Custom fonts from Google Fonts</li>
+                    <li className="my-2">Modular structure</li>
+                    <li className="my-2">Search function using custom API</li>
+                    <li className="my-2">Users can "favourite" recipes</li>
+                    <li className="my-2">Built on Vite</li>
                     </ul>
                     
                 </div>

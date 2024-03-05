@@ -10,21 +10,21 @@ function Arneura({}: Props) {
     <>
         <div>
             <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">ARNEURA</h1>
-            <div className="flex text-[15px] font-bold">
+            <div className="flex text-[13px] font-ibm">
                 {/* container */}
-                <div className="w-1/2">
+                <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[400px] overflow-y-auto">
                     {/* left side */}
-                    <p className="p-6">
+                    <p className="pl-6 leading-normal p-3">
                         I worked on the design and enhancement of ARNEURA's platform. I implemented a Login page, Settings page, and provided various visual enhancements to the UI/UX.
                     </p>
-                    <p className="px-6 py-3">
+                    <p className="px-6">
                         SPECIAL FEATURES:
                     </p>
-                    <ul className="px-6">
-                        <li>API integration for login</li>
-                        <li>Tailwind CSS combined with traditional CSS were used for styling</li>
-                        <li>Custom fonts from Google Fonts</li>
-                        <li>Settings page has a Light mode / Dark mode feature</li>
+                    <ul className="list-disc pl-8 pr-3">
+                    <li className="my-2">API integration for login</li>
+                    <li className="my-2">Tailwind CSS combined with traditional CSS were used for styling</li>
+                    <li className="my-2">Custom fonts from Google Fonts</li>
+                    <li className="my-2">Settings page has a Light mode / Dark mode feature</li>
                     </ul>
                     
                 </div>

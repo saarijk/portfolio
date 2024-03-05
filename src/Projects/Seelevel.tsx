@@ -11,24 +11,23 @@ function Seelevel({}: Props) {
 
   return (
     <>
-      <div className="h-screen flex flex-col">
         <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">See-LEVEL</h1>
-        <div className="flex text-[15px] font-bold flex-1">
+        <div className="flex text-[13px] font-ibm">
           {/* container */}
-          <div className="w-1/2 flex-1">
+          <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[400px] overflow-y-auto">
             {/* left side */}
-            <p className="p-6">
+            <p className="pl-6 leading-normal p-3">
               This is a redesign proposal I made for See-LEVEL. It's a single-page design, and aimed to modernise See-LEVEL's existing website using contemporary design principles to elevate overall user experience.
             </p>
-            <p className="px-6 py-3">
+            <p className="px-6">
               SPECIAL FEATURES:
             </p>
-            <ul className="px-6">
-              <li>Dynamic and responsive design using a combination of Tailwind and traditional CSS</li>
-              <li>Framer Motion for animations/transitions</li>
-              <li>Custom fonts from Google Fonts</li>
-              <li>Modular structure</li>
-              <li>Contact form</li>
+            <ul className="list-disc pl-8 pr-3">
+            <li className="my-2">Dynamic and responsive design using a combination of Tailwind and traditional CSS</li>
+            <li className="my-2">Framer Motion for animations/transitions</li>
+            <li className="my-2">Custom fonts from Google Fonts</li>
+            <li className="my-2">Modular structure</li>
+            <li className="my-2">Contact form</li>
             </ul>
           </div>
           <div className="w-1/2 flex-1 h-auto">
@@ -40,7 +39,6 @@ function Seelevel({}: Props) {
                     </div>
                 </div>
         </div>
-      </div>
     </>
   );
 }

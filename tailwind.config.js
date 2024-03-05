@@ -10,7 +10,8 @@ export default {
         rock: ['Rock Salt', 'cursive'],
         barlow: ['Barlow Condensed', 'sans-serif'],
         nothing: ['Nothing You Could Do', 'cursive'],
-        roboto: ['Roboto Mono', 'monospace']
+        roboto: ['Roboto Mono', 'monospace'],
+        ibm: ['IBM Plex Mono', 'monospace']
       },
     },
     screens: {

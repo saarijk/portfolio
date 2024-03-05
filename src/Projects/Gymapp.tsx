@@ -11,23 +11,27 @@ function Gymapp({}: Props) {
   return (
     <>
         <div>
-            <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">GYMAPP</h1>
-            <div className="flex text-[15px] font-bold">
+            <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">FitLog</h1>
+            <div className="flex text-[13px] font-ibm">
                 {/* container */}
-                <div className="w-1/2">
+                <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[400px] overflow-y-auto">
                     {/* left side */}
-                    <p className="p-6">
-                        My first ever fullstack application: I made a simple backend app using GraphQL and TypeScript, and a React/TypeScript frontend app that used Tailind for styling.
+                    <p className="pl-6 leading-normal p-3">
+                        My first ever full-stack application: I made a simple app for users to store data on their workouts. The backend app uses GraphQL and TypeScript, and it has a React/TypeScript frontend app that uses Tailwind for styling.
                     </p>
-                    <p className="px-6 py-3">
+                    <p className="px-6">
                         SPECIAL FEATURES:
                     </p>
-                    <ul className="px-6">
-                        <li>API integration for regustration, login, and posting workouts</li>
-                        <li>Tailwind CSS combined with traditional CSS were used for styling</li>
-                        <li>Custom fonts from Google Fonts</li>
-                        <li>Backend created with a schema-first approach</li>
-                        <li>Codegen used in the frontend to help manage GraphQL queries/types</li>
+                    <ul className="list-disc pl-8 pr-3">
+                    <li className="my-2">Created GraphQL schema, enforced strong typing with TypeScript</li>
+                        <li className="my-2">API integration for user registration, login, and posting workouts</li>
+                        <li className="my-2">User data stored locally (passwords hashed)</li>
+                        <li className="my-2">Basic input validation and user feedback</li>
+                        <li className="my-2">Tailwind CSS combined with traditional CSS were used for styling</li>
+                        <li className="my-2">Custom fonts from Google Fonts</li>
+                        <li className="my-2">Backend created with a schema-first approach</li>
+                        <li className="my-2">Codegen used in the frontend to help manage GraphQL types, queries, and mutations</li>
+                        <li className="my-2">JWTs used for user authentication</li>
                     </ul>
                     
                 </div>

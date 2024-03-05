@@ -54,7 +54,7 @@ const Projects = ({ setSelectedPage }: Props) => {
           <div className="w-full">
             <p className="p-6 text-[15px] font-bold"></p>
             {/* grid */}
-            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8 mb-[300px]">
+            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8 mb-[200px]">
               {ProjectComponents.map((ProjectComponent, index) => (
                 <Suspense key={index} fallback={<div>Loading...</div>}>
                   <motion.div

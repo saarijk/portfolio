@@ -41,7 +41,7 @@ const Skills = ({ setSelectedPage }: Props) => {
           <div className="w-11/12 pt-10">
             <h1 className="text-black text-4xl font-bold text-center">SKILLS</h1>
             <motion.div
-              className="flex flex-wrap justify-center gap-3 mt-14 text-black"
+              className="flex flex-wrap justify-center gap-3 mt-14 text-black font-ibm"
               variants={containerVariants}
             >
               {/* skills breakdown */}
@@ -52,10 +52,10 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={gitImg} className="h-10 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">
-                  Git Version Control
+                  GitHub
                 </h1>
-                <p className="text-sm  font-bold">
-                  Experienced in using Git to track changes in code repositories.
+                <p className="text-sm">
+                  Experienced in using GitHub to track changes in code repositories.
                   Familiar with commit, push, pull, and branch management.
                 </p>
               </motion.div>
@@ -68,10 +68,10 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <h1 className="font-bold mb-3 text-black">
                   Web Development
                 </h1>
-                <p className="text-sm  font-bold">
+                <p className="text-sm">
                   Skilled in frontend web development, creating visually appealing
                   and responsive UIs. Proficient in HTML and CSS to build interactive
-                  and dynamic websites.
+                  and dynamic websites. 
                 </p>
               </motion.div>
               <motion.div
@@ -81,7 +81,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={tsImg} className="h-10 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">TypeScript</h1>
-                <p className="text-sm  font-bold">
+                <p className="text-sm">
                   Knowledgeable about type annotations, interfaces, modules, and
                   other TS features for enhanced code quality.
                 </p>
@@ -93,7 +93,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={reactImg} className="h-9 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">React</h1>
-                <p className="text-sm  font-bold">
+                <p className="text-sm">
                   Experienced in building UIs using React. Knowledgeable about state
                   management and other core concepts in React development.
                 </p>
@@ -105,7 +105,7 @@ const Skills = ({ setSelectedPage }: Props) => {
               >
                 <img src={gqlImg} className="h-9 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">GraphQL</h1>
-                <p className="text-sm  font-bold">
+                <p className="text-sm">
                   Familiar with the basics of GraphQL integration for data querying and manipulation, using a schema-first approach and Apollo Server.
                 </p>
               </motion.div>
