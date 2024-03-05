@@ -39,7 +39,7 @@ const Projects = ({ setSelectedPage }: Props) => {
     <>
       {/* container */}
       <motion.div
-        className="h-auto w-full flex justify-center"
+        className="h-auto w-full flex justify-center mt-[100px]"
         id="projects"
         onViewportEnter={() => {
           setSelectedPage(SelectedPage.Projects);
