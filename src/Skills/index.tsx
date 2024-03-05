@@ -4,6 +4,7 @@ import reactImg from '@/assets/reactLogo.png';
 import tsImg from '@/assets/tsLogo.png';
 import gitImg from '@/assets/gitLogo.png';
 import gqlImg from '@/assets/graphQLlogo.png';
+import ideaImg from '@/assets/idea.png';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 type Props = {
@@ -107,6 +108,17 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <h1 className="font-bold mb-3 text-black">GraphQL</h1>
                 <p className="text-sm">
                   Familiar with the basics of GraphQL integration for data querying and manipulation, using a schema-first approach and Apollo Server.
+                </p>
+              </motion.div>
+              <motion.div
+                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                variants={itemVariants}
+                whileHover="hover"
+              >
+                <img src={ideaImg} className="h-9 w-10 mb-6" />
+                <h1 className="font-bold mb-3 text-black">Lifelong Learning</h1>
+                <p className="text-sm">
+                Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
                 </p>
               </motion.div>
             </motion.div>
