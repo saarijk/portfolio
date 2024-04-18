@@ -10,9 +10,9 @@ const Contact = ({ setSelectedPage }: Props) => {
     <>
     <section id="contact">
         {/* container */}
-        <motion.div className="w-full h-[40vh] flex" onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
+        <motion.div className="w-full h-auto flex" onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
             {/* left side */}
-            <div className="w-1/5  h-full border-r-2 border-black">
+            <div className="w-1/5 h-[30vh] border-r-2 border-black mb-[-50px]">
                 <p></p>
             </div>
             {/* right side */}
@@ -23,13 +23,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
                     <br/><br/>Feel free to send me a message or connect with me there, and I'll be delighted to engage in meaningful conversations 
                     about projects, opportunities, or shared interests :)</p>
-                    <button className="text-black font-ibm hover:text-black transition duration-500 hover-underline-animation"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">Visit LinkedIn</a></button>
-                </div>
-                <div className="text-xs absolute bottom-0 right-0 font-ibm">
-                    {/* bottom right / footer */}
-                    <p>
-                        &copy; 2024 Katariina Saari. All Rights Reserved.
-                    </p>
+                    <button className="text-black text-md font-ibm hover:text-black transition duration-500 hover-underline-animation"><a href="https://www.linkedin.com/in/katariina-saari-2b5812188/">Visit LinkedIn</a></button> | <button className="text-black font-ibm hover:text-black transition duration-500 hover-underline-animation"><a href="https://github.com/saarijk">Explore GitHub</a></button>
                 </div>
             </div>
         </motion.div>

@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Projects = ({ setSelectedPage }: Props) => {
-  const [expandedStates, setExpandedStates] = useState([false, false, false]);
+  const [expandedStates, setExpandedStates] = useState([false, false, false, false]);
 
   const handleItemClick = (index: number) => {
     setExpandedStates((prevStates) => {
@@ -63,8 +63,13 @@ const Projects = ({ setSelectedPage }: Props) => {
                     animate={{
                       height: expandedStates[index] ? 500 : 52,
                       paddingTop: expandedStates[index] ? 15 : 0,
+                      paddingRight: expandedStates[index] ? 15 : 0,
                       overflow: 'hidden',
-                      borderBottom: expandedStates[index] ? "" : "2px solid #000000",
+                      borderBottom: expandedStates[index] ? "1px solid #000000" : "1px solid #000000",
+                      borderLeft: expandedStates[index] ? "1px solid #d1d5db" : "1px solid #d1d5db",
+                      borderTop: expandedStates[index] ? "1px solid #d1d5db" : "1px solid #d1d5db",
+                      borderRight: expandedStates[index] ? "1px solid #000000" : "1px solid #000000",
+                      borderRadius: "10px",
                     }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="w-full"

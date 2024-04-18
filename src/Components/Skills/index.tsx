@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { SelectedPage } from '@/Shared/types';
-import reactImg from '@/assets/reactLogo.png';
-import tsImg from '@/assets/tsLogo.png';
-import gitImg from '@/assets/gitLogo.png';
-import gqlImg from '@/assets/graphQLlogo.png';
+import reactImg from '@/assets/logos/reactLogo.png';
+import tsImg from '@/assets/logos/tsLogo.png';
+import gitImg from '@/assets/logos/gitLogo.png';
+import gqlImg from '@/assets/logos/graphQLlogo.png';
 import ideaImg from '@/assets/idea.png';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
@@ -18,7 +18,7 @@ const Skills = ({ setSelectedPage }: Props) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 1, // Add a delay before starting children animations
+        delayChildren: 1,
       },
     },
   };
@@ -31,7 +31,7 @@ const Skills = ({ setSelectedPage }: Props) => {
 
   return (
     <>
-      <section id="skills" className="mt-[200px] font-roboto">
+      <section id="skills" className="mt-[100px] font-roboto">
         <motion.div
           className="h-auto w-full flex align-center justify-center"
           variants={containerVariants}
@@ -40,7 +40,7 @@ const Skills = ({ setSelectedPage }: Props) => {
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
           <div className="w-11/12 pt-10">
-            <h1 className="text-black text-4xl font-bold text-center">SKILLS</h1>
+            <h1 className="text-black text-4xl font-bold text-center mt-[20px]">SKILLS</h1>
             <motion.div
               className="flex flex-wrap justify-center gap-3 mt-14 text-black font-ibm"
               variants={containerVariants}
@@ -72,7 +72,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <p className="text-sm">
                   Skilled in frontend web development, creating visually appealing
                   and responsive UIs. Proficient in HTML and CSS to build interactive
-                  and dynamic websites. 
+                  and dynamic websites.
                 </p>
               </motion.div>
               <motion.div
@@ -118,7 +118,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <img src={ideaImg} className="h-9 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">Lifelong Learning</h1>
                 <p className="text-sm">
-                Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
+                  Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
                 </p>
               </motion.div>
             </motion.div>

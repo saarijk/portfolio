@@ -1,55 +1,57 @@
+import React from 'react';
 import Link from './Link';
 import { SelectedPage } from '@/Shared/types';
 
-type Props = {
+interface Props {
     isTopOfPage: boolean;
     selectedPage: SelectedPage;
     setSelectedPage: (value: SelectedPage) => void;
-};
+}
 
-const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Navbar: React.FC<Props> = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     console.log('isTopOfPage:', isTopOfPage);
-    const navbarBackground = isTopOfPage ? "bg-white" : "bg-transparent";
-    const transitionDuration = "0.3s";
+
+    const navbarBackgroundStyle: React.CSSProperties = {
+        backgroundColor: isTopOfPage ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.8)',
+        backdropFilter: isTopOfPage ? 'none' : 'blur(2px)',
+        transition: 'background-color 0.5s ease-in-out'
+    };
 
     return (
-        <div className={` ${navbarBackground} w-full text-black hover:text-slate-600 top-0 fixed items-center align-center z-30 p-1 bg-opacity-0`}
-            style={{
-                transitionDuration: `${transitionDuration}`,
-                WebkitBackdropFilter: 'blur(0px)',
-                backdropFilter: 'blur(0px)',
-            }}
+        <div
+            className="w-full text-black hover:text-slate-600 top-0 fixed items-center align-center z-30 p-1"
+            style={navbarBackgroundStyle}
         >
             <div className="w-[90%] mx-auto flex justify-between items-center py-3">
                 {/* left */}
-                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1 bg-white ">
-                <Link 
+                <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1">
+                    <Link
                         page="HOME"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
-                    <Link 
+                    <Link
                         page="SKILLS"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
-                    <Link 
+                    <Link
                         page="PROJECTS"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
                 </div>
                 {/* right */}
-                <div className="flex align-center gap-8 text-md font-bold font-roboto items-center p-1 bg-white">
-                    <Link 
+                <div className="flex align-center gap-8 text-md font-bold font-roboto items-center p-1">
+                    <Link
                         page="CONTACT"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
-                    /> 
+                    />
                 </div>
             </div>
         </div>
     );
 };
 
-export default Nav;
+export default Navbar;

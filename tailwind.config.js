@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         rock: ['Rock Salt', 'cursive'],
         barlow: ['Barlow Condensed', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         nothing: ['Nothing You Could Do', 'cursive'],
         roboto: ['Roboto Mono', 'monospace'],
         ibm: ['IBM Plex Mono', 'monospace']
