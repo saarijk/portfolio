@@ -28,6 +28,7 @@ body,
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 /* Track */
@@ -130,4 +131,17 @@ ul li {
   background-clip: text;
   color: transparent;
   transition: 0.4s ease-in-out;
+}
+
+.dramatic-shadow {
+  box-shadow: 0 0 50px 10px rgba(2, 7, 10, 0.3);
+}
+
+.dramatic-shadow-light:hover {
+  box-shadow: 0 0 15px 3px rgba(2, 7, 10, 0.2);
+}
+
+.dramatic-shadow:hover,
+.dramatic-shadow-light {
+  box-shadow: 0 0 0px 0px rgba(2, 7, 10, 0.3);
 }

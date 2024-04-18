@@ -8,11 +8,7 @@ function IndexPage({ }: Props) {
 
     return (
         <>
-            <div className="index-page">
-                <Header />
-                <LeftSidebar />
-                <Hero />
-            </div>
+            <Hero />
         </>
     )
 }
