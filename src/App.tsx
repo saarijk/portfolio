@@ -6,6 +6,7 @@ import MainLayout from "./Layouts/MainLayout";
 import NewSkills from "./Components/NewSkills/Index";
 import NewProjects from "./Components/NewProjects.tsx";
 import NewContact from "./Components/NewContact/index.tsx";
+import Blog from "./Components/Blog/index.tsx";
 
 function App() {
 

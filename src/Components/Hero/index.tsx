@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <div className="w-full h-[100vh] flex justify-center">
+        <div className="w-full flex justify-center">
             {/* container */}
             <div className="flex w-5/6 h-5/6 items-center my-auto justify-center" style={{ transform: `translate(${position.x}px, ${position.y}px)` }}>
                 {/* left side */}

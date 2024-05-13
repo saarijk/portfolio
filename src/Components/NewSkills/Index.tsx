@@ -12,9 +12,9 @@ type Props = {}
 function NewSkills({ }: Props) {
     return (
         <>
-            <div className="h-[100vh] w-full font-montserrat flex justify-center items-center">
-                <div className="w-5/6 h-5/6">
-                    <h1 className="text-5xl font-bold text-center mt-[100px]">Skills</h1>
+            <div className="h-[50vh] w-full font-montserrat flex justify-center items-center">
+                <div className="w-5/6 h-5/6 max-w-[1080px]">
+                    <h1 className="text-5xl font-bold text-center mt-[-50px]">Skills</h1>
                     <div className="flex flex-wrap justify-center gap-3 mt-[50px]">
                         <SkillCard name={'GitHub'} logo={gitImg} description={'Experienced in using GitHub to track changes in code repositories. Familiar with commit, push, pull, and branch management.'} lightBg={false} />
                         <SkillCard name={'Web Development'} logo={webIcon} description={'Skilled in frontend web development, creating visually appealing and responsive UIs. Proficient in HTML and CSS to build interactive and dynamic websites.'} lightBg={true} />
