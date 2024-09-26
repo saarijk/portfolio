@@ -14,7 +14,7 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const transitionDuration = "0.3s";
 
     return (
-        <div className={` ${navbarBackground} w-full text-black hover:text-slate-600 top-0 fixed items-center align-center z-30 p-1 bg-opacity-0`}
+        <div className={` ${navbarBackground} w-full text-black hover:text-slate-600 top-0 fixed items-center align-center z-30 p-1 bg-opacity-0 hidden sm:flex`}
             style={{
                 transitionDuration: `${transitionDuration}`,
                 WebkitBackdropFilter: 'blur(0px)',

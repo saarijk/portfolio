@@ -11,10 +11,10 @@ function Gymapp({ }: Props) {
     return (
         <>
             <div>
-                <h1 className="hover:cursor-pointer h-[50px] flex items-center pl-6 text-3xl text-black font-bold">FitLog</h1>
-                <div className="flex text-[13px] font-ibm">
+                <h1 className="h-[50px] flex items-center pl-6 text-3xl text-black font-bold mt-6">FitLog</h1>
+                <div className="flex flex-col sm:flex-row text-[13px] font-ibm">
                     {/* container */}
-                    <div className="w-1/2 h-full flex flex-wrap p-3 max-h-[500px] overflow-y-auto">
+                    <div className="w-full sm:w-1/2 h-full flex flex-wrap p-3 max-h-[500px] overflow-y-auto">
                         {/* left side */}
                         <p className="pl-6 leading-normal p-3">
                             My first ever full-stack application: I made a simple app for users to track their workouts. The backend app uses GraphQL and TypeScript, and it has a React/TypeScript frontend app that uses Tailwind for styling.
@@ -35,9 +35,9 @@ function Gymapp({ }: Props) {
                         </ul>
 
                     </div>
-                    <div className="w-1/2 flex-1 h-auto">
+                    <div className="w-full sm:w-1/2 flex-1 h-auto">
                         {/* right side */}
-                        <div className="flex flex-wrap p-3 justify-around max-h-[500px] overflow-y-auto ">
+                        <div className="flex flex-wrap p-3 justify-around max-h-[300px] sm:max-h-[500px] overflow-y-auto ">
                             {imagePaths.map((image, index) => (
                                 <img key={index} src={image} className="mb-2 border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 rounded-lg" alt={`Image ${index + 1}`} />
                             ))}

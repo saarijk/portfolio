@@ -28,20 +28,20 @@ const Projects = ({ }: Props) => {
         <div className="w-5/6 flex flex-col mt-[48px] font-roboto text-xl items-center">
           {/* title */}
           <div className="text-black text-5xl font-bold relative w-full">
-            <h1 className="text-right">PROJECTS</h1>
+            <h1 className="text-center sm:text-right">PROJECTS</h1>
           </div>
           {/* content */}
           <div className="w-full">
             <p className="p-6 text-[15px] font-bold"></p>
             {/* grid */}
-            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8">
+            <div className="w-full grid grid-cols-1 divide-y divide-black sm:divide-white text-lg h-auto gap-8 mb-12">
               {ProjectComponents.map((ProjectComponent, index) => (
                 <Suspense key={index} fallback={<div>Loading...</div>}>
                   <motion.div
                     initial={false}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="w-full h-[50vh]"
+                    className="w-full"
                   >
                     <ProjectComponent />
                   </motion.div>

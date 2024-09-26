@@ -31,7 +31,7 @@ const Skills = ({ setSelectedPage }: Props) => {
 
   return (
     <>
-      <section id="skills" className="mt-[200px] font-roboto">
+      <section id="skills" className="mt-[50px] sm:mt-[200px] font-roboto">
         <motion.div
           className="h-auto w-full flex align-center justify-center"
           variants={containerVariants}
@@ -39,7 +39,7 @@ const Skills = ({ setSelectedPage }: Props) => {
           animate="visible"
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          <div className="w-11/12 pt-10">
+          <div className="w-full sm:w-11/12 pt-10">
             <h1 className="text-black text-4xl font-bold text-center">SKILLS</h1>
             <motion.div
               className="flex flex-wrap justify-center gap-3 mt-14 text-black font-ibm"
@@ -47,7 +47,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             >
               {/* skills breakdown */}
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -61,7 +61,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -72,11 +72,11 @@ const Skills = ({ setSelectedPage }: Props) => {
                 <p className="text-sm">
                   Skilled in frontend web development, creating visually appealing
                   and responsive UIs. Proficient in HTML and CSS to build interactive
-                  and dynamic websites. 
+                  and dynamic websites.
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -88,7 +88,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -100,7 +100,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
@@ -111,17 +111,20 @@ const Skills = ({ setSelectedPage }: Props) => {
                 </p>
               </motion.div>
               <motion.div
-                className="w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
+                className="w-11/12 sm:w-1/4 min-w-[250px] border-t-[1px] border-l-[1px] border-l-gray-300 border-t-gray-300 border-r-[1px] border-b-[1px] border-gray-500 bg-opacity-10 p-8 z-10 rounded-lg"
                 variants={itemVariants}
                 whileHover="hover"
               >
                 <img src={ideaImg} className="h-9 w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">Lifelong Learning</h1>
                 <p className="text-sm">
-                Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
+                  Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
                 </p>
               </motion.div>
             </motion.div>
+            <div className="flex justify-center w-11/12 mx-auto mt-24 sm:hidden">
+              <button className="bg-emerald-500 p-3 rounded-md"><a href="/projects" className="text-black text-4xl font-bold text-center">CLICK FOR FEATURED PROJECTS</a></button>
+            </div>
           </div>
         </motion.div>
       </section>
