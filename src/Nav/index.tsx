@@ -1,5 +1,6 @@
-import Link from './Link';
+import NavLink from './NavLink';
 import { SelectedPage } from '@/Shared/types';
+import { Link } from 'react-router-dom';
 
 type Props = {
     isTopOfPage: boolean;
@@ -23,29 +24,25 @@ const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <div className="w-[90%] mx-auto flex justify-between items-center py-3">
                 {/* left */}
                 <div className="flex align-center gap-8 text-sm font-bold font-roboto items-center p-1 bg-white ">
-                <Link 
+                    <NavLink
                         page="HOME"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
-                    <Link 
+                    <NavLink
                         page="SKILLS"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
                     />
-                    <Link 
-                        page="PROJECTS"
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
-                    />
+                    <Link to="/projects" className="hover-underline-animation transition duration-500 hover:text-black">PROJECTS</Link>
                 </div>
                 {/* right */}
                 <div className="flex align-center gap-8 text-md font-bold font-roboto items-center p-1 bg-white">
-                    <Link 
+                    <NavLink
                         page="CONTACT"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
-                    /> 
+                    />
                 </div>
             </div>
         </div>

@@ -1,73 +1,47 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { SelectedPage } from '@/Shared/types';
-import { useState } from 'react';
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-};
+type Props = {};
 
-const Projects = ({ setSelectedPage }: Props) => {
-  const [expandedStates, setExpandedStates] = useState([false, false, false]);
-
-  const handleItemClick = (index: number) => {
-    setExpandedStates((prevStates) => {
-      const newStates = [...prevStates];
-      newStates[index] = !newStates[index];
-
-      // Reset other states to false if the current state is set to true
-      if (newStates[index]) {
-        for (let i = 0; i < newStates.length; i++) {
-          if (i !== index) {
-            newStates[i] = false;
-          }
-        }
-      }
-
-      return newStates;
-    });
-  };
-
+const Projects = ({ }: Props) => {
   const ProjectComponents = [
-    React.lazy(() => import('./RecipeMe')),
-    React.lazy(() => import('./Seelevel')),
+    React.lazy(() => import('./TravelTrekker')),
+    React.lazy(() => import('./Gymapp')),
     React.lazy(() => import('./Arneura')),
-    React.lazy(() => import('./Gymapp'))
+    React.lazy(() => import('./Seelevel')),
+    React.lazy(() => import('./RecipeMe'))
   ];
 
   return (
     <>
+      <div className="p-8">
+        <button className="flex gap-3 items-center">
+          <ChevronLeftIcon className="text-black h-6 w-6" /> <a href="/" className="text-black font-bold text-xl hover-underline-animation font-roboto">GO BACK</a>
+        </button>
+      </div>
       {/* container */}
-      <motion.div
-        className="h-auto w-full flex justify-center mt-[100px]"
+      <div
+        className="h-auto w-full flex justify-center mt-[50px]"
         id="projects"
-        onViewportEnter={() => {
-          setSelectedPage(SelectedPage.Projects);
-        }}
       >
         <div className="w-5/6 flex flex-col mt-[48px] font-roboto text-xl items-center">
           {/* title */}
-          <div className="text-black text-4xl font-bold relative w-full">
+          <div className="text-black text-5xl font-bold relative w-full">
             <h1 className="text-right">PROJECTS</h1>
           </div>
           {/* content */}
           <div className="w-full">
             <p className="p-6 text-[15px] font-bold"></p>
             {/* grid */}
-            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8 mb-[200px]">
+            <div className="w-full grid grid-cols-1 text-lg h-auto gap-8">
               {ProjectComponents.map((ProjectComponent, index) => (
                 <Suspense key={index} fallback={<div>Loading...</div>}>
                   <motion.div
-                    onClick={() => handleItemClick(index)}
-                    initial={false} 
-                    animate={{
-                      height: expandedStates[index] ? 500 : 52,
-                      paddingTop: expandedStates[index] ? 15 : 0,
-                      overflow: 'hidden',
-                      borderBottom: expandedStates[index] ? "" : "2px solid #000000",
-                    }}
+                    initial={false}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="w-full"
+                    className="w-full h-[50vh]"
                   >
                     <ProjectComponent />
                   </motion.div>
@@ -76,7 +50,7 @@ const Projects = ({ setSelectedPage }: Props) => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
