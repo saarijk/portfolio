@@ -123,7 +123,11 @@ const Skills = ({ setSelectedPage }: Props) => {
               </motion.div>
             </motion.div>
             <div className="flex justify-center w-11/12 mx-auto mt-24 sm:hidden">
-              <button className="bg-emerald-500 p-3 rounded-md"><a href="/projects" className="text-black text-4xl font-bold text-center">CLICK FOR FEATURED PROJECTS</a></button>
+              <button className="bg-white border border-black p-3 rounded-md hover:bg-black text-black hover:text-white transition-colors duration-300">
+                <a href="/projects" className="text-3xl font-bold text-center tracking-wider">
+                  CLICK FOR FEATURED PROJECTS
+                </a>
+              </button>
             </div>
           </div>
         </motion.div>
