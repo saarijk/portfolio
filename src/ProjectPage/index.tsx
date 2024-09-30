@@ -1,5 +1,4 @@
 import Projects from '@/Projects'
-import React from 'react'
 
 type Props = {}
 
