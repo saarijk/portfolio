@@ -4,9 +4,7 @@ type Props = {}
 
 function ProjectPage({ }: Props) {
     return (
-        <>
-            <Projects />
-        </>
+        <Projects />
     )
 }
 

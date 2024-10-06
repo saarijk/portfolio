@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Nav = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-    console.log('isTopOfPage:', isTopOfPage);
     const navbarBackground = isTopOfPage ? "bg-white" : "bg-transparent";
     const transitionDuration = "0.3s";
 

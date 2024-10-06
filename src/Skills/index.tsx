@@ -6,6 +6,7 @@ import gitImg from '@/assets/gitLogo.png';
 import gqlImg from '@/assets/graphQLlogo.png';
 import ideaImg from '@/assets/idea.png';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -51,7 +52,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={gitImg} className="h-10 w-10 mb-6" />
+                <img src={gitImg} className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">
                   GitHub
                 </h1>
@@ -65,7 +66,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <GlobeAltIcon className="h-10 w-10 mb-6" />
+                <GlobeAltIcon className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">
                   Web Development
                 </h1>
@@ -80,7 +81,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={tsImg} className="h-10 w-10 mb-6" />
+                <img src={tsImg} className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">TypeScript</h1>
                 <p className="text-sm">
                   Knowledgeable about type annotations, interfaces, modules, and
@@ -92,7 +93,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={reactImg} className="h-9 w-10 mb-6" />
+                <img src={reactImg} className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">React</h1>
                 <p className="text-sm">
                   Experienced in building UIs using React. Knowledgeable about state
@@ -104,7 +105,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={gqlImg} className="h-9 w-10 mb-6" />
+                <img src={gqlImg} className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">GraphQL</h1>
                 <p className="text-sm">
                   Familiar with the basics of GraphQL integration for data querying and manipulation, using a schema-first approach and Apollo Server.
@@ -115,7 +116,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <img src={ideaImg} className="h-9 w-10 mb-6" />
+                <img src={ideaImg} className="h-auto w-10 mb-6" />
                 <h1 className="font-bold mb-3 text-black">Lifelong Learning</h1>
                 <p className="text-sm">
                   Committed to ongoing learning and growth, actively seeking out opportunities to expand knowledge and expertise, ensuring adaptability and readiness to tackle new challenges.
@@ -124,9 +125,11 @@ const Skills = ({ setSelectedPage }: Props) => {
             </motion.div>
             <div className="flex justify-center w-11/12 mx-auto mt-24 sm:hidden">
               <button className="bg-white border border-black p-3 rounded-md hover:bg-black text-black hover:text-white transition-colors duration-300">
-                <a href="/projects" className="text-3xl font-bold text-center tracking-wider">
-                  CLICK FOR FEATURED PROJECTS
-                </a>
+                <Link to="/projects">
+                  <p className="text-3xl font-bold text-center tracking-wider">
+                    CLICK FOR FEATURED PROJECTS
+                  </p>
+                </Link>
               </button>
             </div>
           </div>
